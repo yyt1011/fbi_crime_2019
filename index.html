@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>d3-parallel</title>
+  </head>
+  <style>
+    a {
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+      color: black;
+    }
+    .intro {
+      width: 60%;
+      margin: 80px auto;
+      text-align: center;
+    }
+    #chart {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto;
+    }
+    .focus {
+      position: absolute;
+    }
+    .label-wrap {
+      position: absolute;
+      top: -20px;
+      left: 0px;
+    }
+    .label {
+      position: absolute;
+      display: block;
+      width: 125px;
+      font-size: 12px;
+      color: black;
+      line-height: 13px;
+    }
+    .links path {
+      transition: opacity, 0.1s;
+    }
+  </style>
+  <body>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-sankey/0.12.3/d3-sankey.min.js"></script>
+    <div class="intro">
+      <h3>Number of offenses by race and offense type in the US in 2019</h3>
+      <div>
+        Source:
+        <a
+          href="https://ucr.fbi.gov/hate-crime/2019/topic-pages/tables/table-3.xls"
+          target="_blank"
+          >FBI Hate Crime Statistics</a
+        >
+      </div>
+    </div>
+
+    <div id="chart"></div>
+    <script src="sankey.js"></script>
+  </body>
+</html>
